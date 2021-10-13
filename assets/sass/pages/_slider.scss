@@ -1,0 +1,63 @@
+// slider section starts
+
+.slider {
+    position: relative;
+
+    .wrapper { 
+        width: 100%;
+        overflow: hidden;
+    }
+
+    .sliderImage { 
+        @include flex(row);
+        
+        li { min-width: 100%;}
+    }
+
+    .sliderControls {
+        @include boxsizing;
+        width: 100%;
+        padding: 0 5%;
+        position: absolute;
+        bottom: 290px;
+        color: $primary-color;
+
+        li {
+            text-indent: -9999px;
+            cursor: pointer;
+
+            &:first-child::after {
+                @include icon('\f104',80px);
+            }
+
+            &:last-child { 
+                float: right;
+
+                &::after {
+                    @include icon('\f105',80px);
+                    float: right;                
+                }
+            }            
+        }
+    }
+
+    .sliderDots {
+        width: 100%;
+        text-align: center;
+        position: absolute;
+        bottom: 28px;
+
+        li {
+            width: 1%;
+            text-indent: -9999px;
+            color: $primary-color;
+
+            &::before { @include icon('\f1db', 12px)}
+        }
+
+        .active::before { @include icon('\f111',12px)}
+
+    }    
+}
+
+// slider section ends
