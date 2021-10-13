@@ -1,0 +1,109 @@
+/*=================================
+  Header styling starts here
+=================================*/
+
+header {
+  width: 100%;
+  padding: 13px 0 23px;
+  border-top: 10px solid #000000;
+  position: absolute;
+  background-color: $primary-background-color;
+
+  .wrapper { @include flex(row,space-between,null,end);}
+  a {color: inherit;}
+  .side { width: 48%;}
+
+  .side__upper {
+      @include flex(row,end);
+      align-items: center;
+
+      ul:first-child { 
+          width: 12%;
+          @include flex(row);
+          color: $primary-color;            
+
+          li {
+              width: 50%;
+              padding: 0 1%;
+              font-size: 11px;
+              text-transform: uppercase;
+          }
+
+          li:first-child a {
+              padding-right: 20%;
+              border-right: 1px solid $primary-color;
+          }
+      }
+
+      span {
+          @include boxsizing;
+          width: 20%;
+          max-height: 18px;
+          padding: 3px 1.5% 0;
+          margin-right: 1.5%;
+          background-color: #6d6e72;
+          color: $primary-color;
+          text-indent: -9999px;
+          
+          &::before { @include icon('\f002');}
+      }
+
+      .socialMedia {
+          width: 30%;
+          @include flex (row,space-between);
+          color: $primary-color;
+
+          li {
+              @include boxsizing;
+              width: 14%;
+              max-height: 18px;                
+              background-color: #6d6e72;
+              text-align: center;
+
+              a { 
+                  padding: 4px 0 0;
+                  text-indent: -9999px;
+              }
+
+              &:first-child a::before { @include icon('\f09a');}
+              &:nth-child(2) a::before { @include icon('\f099');}
+              &:nth-child(3) a::before { @include icon('\f231');}
+              &:nth-child(4) a::before { @include icon('\f16d');}
+              &:nth-child(5) a::before { @include icon('t');}
+              &:nth-child(6) a::before { @include icon('\f16a');}
+
+          }
+      }
+  }
+
+  nav {
+      ul {
+          margin-top: 10px;
+          @include flex(row,space-between);
+          color: $primary-color;
+          text-transform: uppercase;
+          font-size: 13px;
+          align-items: center;
+      }
+
+      a { border-right: 1px solid $primary-color;}
+
+      li:first-child a {
+          border: 0;
+          text-indent: -9999px;
+
+          &::before { @include icon('\f015',20px);}
+      }
+
+      li:nth-child(2) a {padding-right: 15%;}
+      li:nth-child(3) a {padding-right: 10%;}
+      li:nth-child(4) a {padding-right: 22%;}
+      li:nth-child(5) a {padding-right: 10%;}
+      li:nth-child(6) a {padding-right: 16%;}
+      li:nth-child(7) a {border: 0;}
+  }
+}
+
+/*=================================
+  Header styling ends here
+=================================*/
