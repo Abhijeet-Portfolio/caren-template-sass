@@ -3,9 +3,8 @@
 .studio {
     width: 93%;
     margin: 36px auto 10px;
-    ul { 
-        @include flex(row,space-between);
-    }
+
+    ul { @include flex(row,space-between);}
 
     li {
         position: relative;

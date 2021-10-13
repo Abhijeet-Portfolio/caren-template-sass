@@ -1,0 +1,40 @@
+// new section starts
+
+.new {
+    width: 66.5%;
+    margin: 16px auto 10px;
+    position: relative;
+    overflow: hidden;
+
+    .wrapper { width: 100%}
+
+    span {
+        @include boxsizing;
+        width: 18%;
+        padding: 50px 0 10px;
+        display: block;
+        position: absolute;
+        top: -15px;
+        left: -6%;
+        background-color: #000000;        
+        color: $primary-color;
+        text-transform: uppercase;
+        text-align: center;
+        font-size: 20px;
+        transform: rotate(-45deg);
+    }
+
+    a {
+        text-indent: -9999px;
+
+        &::before { 
+            @include icon ('\f101',25px);
+            position: absolute;
+            right: 4%;
+            bottom: 45px;
+            color: $primary-color;
+        }
+    }
+}
+
+// new section ends

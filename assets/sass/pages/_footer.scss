@@ -1,0 +1,86 @@
+/*=================================
+  Footer styling starts here
+=================================*/
+
+footer {
+    padding: 27px 0 41px;
+    margin-top: 43px;
+    background-color: #000000;
+
+    .wrapper { @include flex(row,space-between,null,end);}
+
+    p {
+        color: #c9c8ce;
+        font-size: 11px;
+        text-transform: capitalize;
+    }
+
+    .sideFooter { 
+        width: 48%;
+        padding-top: 24px;
+        position: relative;
+    }
+
+    .socialMedia {
+        width: 25%;
+        @include flex (row,space-between);
+        position: absolute;
+        top: 0;
+        right: 0;
+        color: $primary-color;
+
+        li {
+            @include boxsizing;
+            width: 14%;
+            max-height: 18px;                
+            background-color: #6d6e72;
+            text-align: center;
+
+            a { 
+                padding: 4px 0 0;
+                color: $primary-color;
+                text-indent: -9999px;
+            }
+
+            &:first-child a::before { @include icon('\f09a');}
+            &:nth-child(2) a::before { @include icon('\f099');}
+            &:nth-child(3) a::before { @include icon('\f231');}
+            &:nth-child(4) a::before { @include icon('\f16d');}
+            &:nth-child(5) a::before { @include icon('t');}
+            &:nth-child(6) a::before { @include icon('\f16a');}
+
+        }
+    }
+
+    .nav {
+        margin-top: 10px;
+        @include flex(row,space-between);
+        color: $primary-color;
+        text-transform: uppercase;
+        font-size: 13px;
+        align-items: center;
+
+        a { 
+            border-right: 1px solid $primary-color;
+            color: $primary-color;
+        }
+
+        li:first-child a {
+            border: 0;
+            text-indent: -9999px;
+
+            &::before { @include icon('\f015',20px);}
+        }
+
+        li:nth-child(2) a {padding-right: 15%;}
+        li:nth-child(3) a {padding-right: 10%;}
+        li:nth-child(4) a {padding-right: 22%;}
+        li:nth-child(5) a {padding-right: 10%;}
+        li:nth-child(6) a {padding-right: 16%;}
+        li:nth-child(7) a {border: 0;}
+    }
+}
+
+/*=================================
+  Footer styling ends here
+=================================*/
