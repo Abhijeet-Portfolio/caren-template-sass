@@ -108,7 +108,7 @@ header {
   border-top: 10px solid #000000;
   z-index: 1000;
   position: absolute;
-  background-color: rgba(0, 0, 0, 0.8); }
+  background-color: rgba(0, 0, 0, 0.6); }
   header .wrapper {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -337,3 +337,77 @@ header {
       font-family: 'fontAwesome';
       font-size: 12px;
       text-indent: 0; }
+
+.studio {
+  width: 93%;
+  margin: 36px auto 10px; }
+  .studio ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    flex-direction: row;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    -webkit-box-pack: space-between;
+    -ms-flex-pack: space-between;
+    justify-content: space-between; }
+  .studio li {
+    position: relative; }
+    .studio li div {
+      padding: 65px 13% 0;
+      position: absolute;
+      top: 0;
+      text-transform: uppercase;
+      font-size: 30px; }
+      .studio li div a {
+        margin: 13px 5%;
+        color: #fdfdfd;
+        text-indent: -9999px; }
+        .studio li div a::before {
+          content: "";
+          float: right;
+          font-family: 'fontAwesome';
+          font-size: 25px;
+          text-indent: 0; }
+    .studio li h3 {
+      margin: 4px 0;
+      font-weight: 600;
+      line-height: 1.4; }
+    .studio li .more {
+      width: 100%;
+      min-height: 100%;
+      position: absolute;
+      top: 0;
+      background-color: rgba(0, 0, 0, 0.6);
+      text-align: center;
+      cursor: pointer;
+      opacity: 0; }
+      .studio li .more a {
+        width: 22%;
+        margin-top: 140px;
+        color: #b31d7f;
+        text-transform: uppercase;
+        font-size: 18px;
+        font-weight: 600; }
+        .studio li .more a::after {
+          content: "";
+          float: right;
+          font-family: 'fontAwesome';
+          font-size: 19px;
+          text-indent: 0; }
+
+.view ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  flex-direction: row;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  -webkit-box-pack: space-between;
+  -ms-flex-pack: space-between;
+  justify-content: space-between; }
+
+.view li {
+  width: 31%; }
