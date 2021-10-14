@@ -1,0 +1,137 @@
+// media queries for hover
+
+@media only screen and (min-width: 1024px) {
+
+    .side__upper {
+        a:hover,
+        span:hover { color: #bbbbbb;}
+
+        .socialMedia li:hover {
+            background-color: $primary-color;
+
+            a { color: #bbbbbb;}
+        }        
+    }
+
+    nav a:hover { color: #bbbbbb;}
+
+    .slider {
+        .sliderControls li:hover::after { color: #bbbbbb;}
+        .sliderDots li:hover::before { content: '\f111';}
+    }
+
+    .studio {
+        a:hover { color: #bbbbbb;}
+        .more:hover { opacity: 1;}
+    }
+
+    .view a:hover { color: #bbbbbb;}
+    .new a:hover::before { color: #bbbbbb;}
+
+    footer {
+        .socialMedia li:hover {
+            background-color: $primary-color;
+
+            a { color: #bbbbbb;}
+        }
+
+        .nav a:hover { color: #bbbbbb;}
+    }
+}
+
+@media only screen and (max-width: 995px) {
+
+    .wrapper { width: 90%;}
+    header .side { width: 52%;}
+    .slider .sliderControls { bottom: 200px;}
+    .studio { width: 100%;}
+    .view { width: 100%;}
+    .new { width: 90%;}
+    footer .sideFooter { width: 52%;}
+
+}
+
+@media only screen and (max-width: 720px) {
+
+    .wrapper { width: 95%;}
+    header .side { width: 70%;}
+    .slider .sliderControls { bottom: 130px;}
+    .slider .sliderDots li { width: 2%;}
+
+    .studio ul {        
+        @include flex(column);
+
+        li:first-child { 
+            width: 40%;
+            margin: 10px auto;
+        }
+
+        li:last-child {
+            width: 80%;
+            margin: 10px auto;
+        }
+    }
+
+    .view ul {
+        @include flex(column);
+
+        li {
+            width: 40%;
+            margin: 10px auto;
+        }
+    }
+
+    .new span { 
+        width: 25%;
+        left: -9%;
+    }
+
+    footer .wrapper { @include flex(column,center,null,center);}
+    footer .sideFooter { width: 65%;}
+
+    footer .socialMedia {
+        margin: 10px auto; 
+        position: static;
+    }
+}
+
+@media only screen and (max-width: 540px) {
+    header {
+        .side {display: none;}
+        .hambuger { display: block;}
+    }
+}
+
+@media only screen and (max-width: 425px) {
+
+    .slider {
+        .sliderControls { 
+            bottom: 70px;
+
+            li:first-child::after,
+            li:last-child::after { font-size: 50px;}
+        }
+
+        .sliderDots { 
+            bottom: 5px;
+
+            li { width: 3%;}        
+        }
+    }
+    
+    .studio ul li:first-child { width: 70%;}
+    .view ul li { width: 80%;}
+    .view p::before { top: 25px;}
+
+    .new span {
+        top: -30px;
+        left: -11%;
+        font-size: 14px;
+    }
+
+    footer {
+        .sideFooter { width: 100%;}
+        .socialMedia { width: 30%;}
+        .nav { font-size: 11px;}
+    }
+}
